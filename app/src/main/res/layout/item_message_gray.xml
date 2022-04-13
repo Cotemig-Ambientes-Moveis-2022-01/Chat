@@ -7,10 +7,11 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_marginVertical="10dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginRight="101dp"
-        android:background="@drawable/background_blue">
+        android:layout_marginLeft="101dp"
+        android:layout_marginRight="27dp"
+        android:background="@drawable/background_gray">
 
         <TextView
             android:id="@+id/message"
@@ -20,7 +21,7 @@
             android:layout_marginVertical="20dp"
             android:fontFamily="@font/roboto_medium"
             android:text="Hi, son, how are you doing? Today, my father and I went to buy a car, bought a cool car."
-            android:textColor="@color/white"
+            android:textColor="@color/text_color"
             android:textSize="16sp" />
 
     </RelativeLayout>

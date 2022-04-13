@@ -10,10 +10,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var listMessages = ArrayList<Message>()
-        listMessages.add(Message("Hi, son, how are you doing? Today, my father and I went to buy a car, bought a cool car."))
-        listMessages.add(Message("Oh! Cool Send me photo)"))
-        listMessages.add(Message("Ok\uD83D\uDE09"))
-        listMessages.add(Message("Will we arrive tomorrow?"))
+        listMessages.add(Message("Hi, son, how are you doing? Today, my father and I went to buy a car, bought a cool car.", 1))
+        listMessages.add(Message("Oh! Cool Send me photo)", 2))
+        listMessages.add(Message("Ok\uD83D\uDE09", 1))
+        listMessages.add(Message("Will we arrive tomorrow?", 1))
 
 
         var messages = findViewById<ListView>(R.id.messages)

@@ -22,11 +22,20 @@ class MessageAdapter(var context: Context, var list: List<Message>) : BaseAdapte
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        var view = LayoutInflater.from(context).inflate(R.layout.item_message, null)
+        if (list[p0].type == 1) {
+            var view = LayoutInflater.from(context).inflate(R.layout.item_message, null)
 
-        var message = view.findViewById<TextView>(R.id.message)
-        message.text = list[p0].message
+            var message = view.findViewById<TextView>(R.id.message)
+            message.text = list[p0].message
 
-        return view;
+            return view;
+        } else {
+            var view = LayoutInflater.from(context).inflate(R.layout.item_message_gray, null)
+
+            var message = view.findViewById<TextView>(R.id.message)
+            message.text = list[p0].message
+
+            return view;
+        }
     }
 }
