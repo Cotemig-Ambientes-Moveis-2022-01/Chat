@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5681618293755497" />
         <entry key="app/src/main/res/layout/item_message.xml" value="0.5744791666666667" />
         <entry key="app/src/main/res/layout/item_message_gray.xml" value="0.33645833333333336" />
+        <entry key="app/src/main/res/layout/item_message_photo.xml" value="0.33645833333333336" />
       </map>
     </option>
   </component>

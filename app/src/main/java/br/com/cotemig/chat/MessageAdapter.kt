@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 
 class MessageAdapter(var context: Context, var list: List<Message>) : BaseAdapter() {
@@ -29,11 +30,18 @@ class MessageAdapter(var context: Context, var list: List<Message>) : BaseAdapte
             message.text = list[p0].message
 
             return view;
-        } else {
+        } else if (list[p0].type == 2) {
             var view = LayoutInflater.from(context).inflate(R.layout.item_message_gray, null)
 
             var message = view.findViewById<TextView>(R.id.message)
             message.text = list[p0].message
+
+            return view;
+        } else {
+            var view = LayoutInflater.from(context).inflate(R.layout.item_message_photo, null)
+
+            var photo = view.findViewById<ImageView>(R.id.photo)
+            photo.setImageResource(list[p0].picture)
 
             return view;
         }
