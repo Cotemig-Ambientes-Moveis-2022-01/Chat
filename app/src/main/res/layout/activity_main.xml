@@ -68,7 +68,7 @@
         android:layout_below="@id/header"
         android:layout_marginBottom="129dp"
         android:divider="@color/transparent"
-        tools:listitem="@layout/item_message" />
+        tools:listitem="@layout/item_message_blue" />
 
     <RelativeLayout
         android:id="@+id/footer"

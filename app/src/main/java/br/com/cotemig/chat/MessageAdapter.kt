@@ -24,7 +24,7 @@ class MessageAdapter(var context: Context, var list: List<Message>) : BaseAdapte
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         if (list[p0].type == 1) {
-            var view = LayoutInflater.from(context).inflate(R.layout.item_message, null)
+            var view = LayoutInflater.from(context).inflate(R.layout.item_message_blue, null)
 
             var message = view.findViewById<TextView>(R.id.message)
             message.text = list[p0].message
