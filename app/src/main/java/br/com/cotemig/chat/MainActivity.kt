@@ -9,15 +9,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var listMessages = ArrayList<Message>()
-        listMessages.add(Message("Hi, son, how are you doing? Today, my father and I went to buy a car, bought a cool car.", 1))
-        listMessages.add(Message("Oh! Cool Send me photo)", 2))
-        listMessages.add(Message("Ok\uD83D\uDE09", 1))
-        listMessages.add(Message(R.drawable.photo, 3))
-        listMessages.add(Message("Will we arrive tomorrow?", 1))
+        var list = ArrayList<Message>()
+        list.add(Message("Hi, son, how are you doing? Today, my father and I went to buy a car, bought a cool car.", 1))
+        list.add(Message("Oh! Cool Send me photo", 2))
+        list.add(Message("Ok\uD83D\uDE09", 1))
+        list.add(Message("Will we arrive tomorrow?", 1))
 
-        var messages = findViewById<ListView>(R.id.messages)
-        messages.adapter = MessageAdapter(this, listMessages)
-
+        var chat = findViewById<ListView>(R.id.chat)
+        chat.adapter = MessageAdapter(this, list)
     }
 }

@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/item_message.xml" value="0.5744791666666667" />
         <entry key="app/src/main/res/layout/item_message_blue.xml" value="0.37135416666666665" />
         <entry key="app/src/main/res/layout/item_message_gray.xml" value="0.33645833333333336" />
+        <entry key="app/src/main/res/layout/item_message_grey.xml" value="0.403125" />
         <entry key="app/src/main/res/layout/item_message_photo.xml" value="0.33645833333333336" />
       </map>
     </option>

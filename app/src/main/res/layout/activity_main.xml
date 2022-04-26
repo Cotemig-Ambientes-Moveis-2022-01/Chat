@@ -7,62 +7,68 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginTop="57dp">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="69dp"
-            android:layout_height="64dp"
-            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="64dp"
             android:background="@color/transparent"
             android:src="@drawable/back" />
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="57dp"
             android:layout_toRightOf="@id/back"
             android:src="@drawable/avatar" />
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="65dp"
             android:layout_toRightOf="@id/avatar"
             android:fontFamily="@font/roboto_bold"
             android:text="Mother ❤"
-            android:textColor="@color/black"
+            android:textColor="@color/textcolor"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/userName"
+            android:layout_below="@id/username"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/avatar"
             android:fontFamily="@font/roboto_medium"
-            android:text="Online"
+            android:text="@string/online"
             android:textColor="@color/blue"
             android:textSize="16sp" />
 
         <ImageButton
-            android:id="@+id/profileMenu"
-            android:layout_width="76dp"
-            android:layout_height="64dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="28dp"
             android:background="@color/transparent"
             android:src="@drawable/profile_menu" />
+
 
     </RelativeLayout>
 
     <ListView
-        android:id="@+id/messages"
+        android:id="@+id/chat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/header"
@@ -71,55 +77,58 @@
         tools:listitem="@layout/item_message_blue" />
 
     <RelativeLayout
-        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="129dp"
         android:layout_alignParentBottom="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_centerVertical="true"
-            android:layout_marginHorizontal="27dp"
+            android:layout_height="match_parent"
+            android:layout_margin="27dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="27dp"
             android:background="@drawable/background_text">
 
             <EditText
-                android:id="@+id/editMessage"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:id="@+id/message"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="30dp"
-                android:layout_toLeftOf="@id/plus"
+                android:layout_marginLeft="31dp"
                 android:background="@color/transparent"
                 android:fontFamily="@font/roboto_medium"
-                android:hint="Type your message..."
-                android:textColor="@color/gray"
+                android:hint="@string/type_your_message"
+                android:textColor="@color/edittextcolor"
                 android:textSize="17sp" />
 
             <ImageButton
                 android:id="@+id/send"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="24dp"
+                android:layout_marginRight="35dp"
                 android:background="@color/transparent"
                 android:src="@drawable/send" />
 
             <ImageButton
                 android:id="@+id/vector"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="23.7dp"
                 android:layout_toLeftOf="@id/send"
                 android:background="@color/transparent"
                 android:src="@drawable/vector" />
 
             <ImageButton
                 android:id="@+id/plus"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="22.7dp"
                 android:layout_toLeftOf="@id/vector"
                 android:background="@color/transparent"
                 android:src="@drawable/plus" />
@@ -127,6 +136,8 @@
 
         </RelativeLayout>
 
+
     </RelativeLayout>
+
 
 </RelativeLayout>
