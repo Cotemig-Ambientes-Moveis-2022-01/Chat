@@ -10,6 +10,7 @@ import android.widget.TextView
 import br.com.cotemig.chat.R
 import br.com.cotemig.chat.models.Account
 import coil.load
+import coil.transform.RoundedCornersTransformation
 
 class FriendsAdapter(var context: Context, var list: List<Account>) : BaseAdapter() {
 
@@ -18,18 +19,20 @@ class FriendsAdapter(var context: Context, var list: List<Account>) : BaseAdapte
     }
 
     override fun getItem(p0: Int): Any {
-        TODO("Not yet implemented")
+        return ""
     }
 
     override fun getItemId(p0: Int): Long {
-        TODO("Not yet implemented")
+        return 0
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         var view = LayoutInflater.from(context).inflate(R.layout.item_friend, null)
 
         var avatar = view.findViewById<ImageView>(R.id.avatar)
-        avatar.load(list[p0].picture)
+        avatar.load(list[p0].picture){
+            transformations(RoundedCornersTransformation(50f))
+        }
         var name = view.findViewById<TextView>(R.id.name)
         name.text = list[p0].name
 
