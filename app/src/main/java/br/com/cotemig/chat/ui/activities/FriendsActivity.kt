@@ -22,7 +22,7 @@ class FriendsActivity : AppCompatActivity() {
     fun getFriends() {
 
         var s = RetrofitInitializer().serviceFriends()
-        var call = s.getFriend("4l4s9mspvoe4k1g1jbo7ll")
+        var call = s.getFriend("703cjt2rm1r681g1jh2sao")
 
         call.enqueue(object : retrofit2.Callback<List<Account>> {
             override fun onResponse(call: Call<List<Account>>, response: Response<List<Account>>) {

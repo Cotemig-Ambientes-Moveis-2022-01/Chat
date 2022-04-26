@@ -8,4 +8,5 @@ class Account {
     var password: String = ""
     var token: String = ""
     var messages: Int = 0
+    var online: Boolean = false
 }
