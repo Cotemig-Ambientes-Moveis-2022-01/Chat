@@ -9,10 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import br.com.cotemig.chat.R
 import br.com.cotemig.chat.models.Account
+import br.com.cotemig.chat.models.Friend
 import coil.load
 import coil.transform.RoundedCornersTransformation
 
-class FriendsAdapter(var context: Context, var list: List<Account>) : BaseAdapter() {
+class FriendsAdapter(var context: Context, var list: List<Friend>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return list.size

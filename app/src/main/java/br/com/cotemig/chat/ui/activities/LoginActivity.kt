@@ -1,5 +1,6 @@
 package br.com.cotemig.chat.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -37,7 +38,12 @@ class LoginActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
 
                 if (response.code() == 200) {
-                    Toast.makeText(this@LoginActivity, "Tudo certo", Toast.LENGTH_LONG).show()
+
+                    response.body()?.let{
+                        showFriends(it)
+                    }
+
+//                    Toast.makeText(this@LoginActivity, "Tudo certo", Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(
                         this@LoginActivity,
@@ -58,4 +64,11 @@ class LoginActivity : AppCompatActivity() {
         })
 
     }
+
+    fun showFriends(account: Account){
+        var intent = Intent(this, FriendsActivity::class.java)
+        intent.putExtra("token", account.token)
+        startActivity(intent)
+    }
+
 }

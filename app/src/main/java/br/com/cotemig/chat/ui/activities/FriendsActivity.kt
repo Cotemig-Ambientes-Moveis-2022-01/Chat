@@ -6,6 +6,7 @@ import android.widget.ListView
 import android.widget.Toast
 import br.com.cotemig.chat.R
 import br.com.cotemig.chat.models.Account
+import br.com.cotemig.chat.models.Friend
 import br.com.cotemig.chat.services.RetrofitInitializer
 import br.com.cotemig.chat.ui.adapters.FriendsAdapter
 import retrofit2.Call
@@ -21,24 +22,33 @@ class FriendsActivity : AppCompatActivity() {
 
     fun getFriends() {
 
-        var s = RetrofitInitializer().serviceFriends()
-        var call = s.getFriend("53q6mlfmvbfns1g261vs5b")
+        var token = intent.getStringExtra("token")
 
-        call.enqueue(object : retrofit2.Callback<List<Account>> {
-            override fun onResponse(call: Call<List<Account>>, response: Response<List<Account>>) {
-                response.body()?.let {
-                    showFriends(it)
+        token?.let {
+
+            var s = RetrofitInitializer().serviceFriends()
+            var call = s.getFriend(it)
+
+            call.enqueue(object : retrofit2.Callback<List<Friend>> {
+                override fun onResponse(
+                    call: Call<List<Friend>>,
+                    response: Response<List<Friend>>
+                ) {
+                    response.body()?.let {
+                        showFriends(it)
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<List<Account>>, t: Throwable) {
+                override fun onFailure(call: Call<List<Friend>>, t: Throwable) {
 
-            }
-        })
+                }
+            })
+
+        }
 
     }
 
-    fun showFriends(list: List<Account>) {
+    fun showFriends(list: List<Friend>) {
         var friends = findViewById<ListView>(R.id.friends)
         friends.adapter = FriendsAdapter(this, list)
     }
