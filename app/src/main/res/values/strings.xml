@@ -2,4 +2,8 @@
     <string name="app_name">Chat</string>
     <string name="online">Online</string>
     <string name="type_your_message">Type your message...</string>
+    <string name="seja_bem_vindo">Seja bem-vindo!</string>
+    <string name="entre_com_seu_e_mail">Entre com seu e-mail</string>
+    <string name="entre_com_sua_senha">Entre com sua senha</string>
+    <string name="entrar">Entrar</string>
 </resources>

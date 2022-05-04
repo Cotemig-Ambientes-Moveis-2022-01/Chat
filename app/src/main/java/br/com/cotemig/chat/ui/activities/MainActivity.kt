@@ -1,8 +1,11 @@
-package br.com.cotemig.chat
+package br.com.cotemig.chat.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import br.com.cotemig.chat.models.Message
+import br.com.cotemig.chat.ui.adapters.MessageAdapter
+import br.com.cotemig.chat.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

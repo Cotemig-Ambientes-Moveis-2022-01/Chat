@@ -1,12 +1,13 @@
-package br.com.cotemig.chat
+package br.com.cotemig.chat.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
 import android.widget.TextView
+import br.com.cotemig.chat.models.Message
+import br.com.cotemig.chat.R
 
 class MessageAdapter(var context: Context, var list: List<Message>) : BaseAdapter() {
 
