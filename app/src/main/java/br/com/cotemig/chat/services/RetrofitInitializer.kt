@@ -17,4 +17,8 @@ class RetrofitInitializer {
         return retrofit.create(ServiceFriend::class.java)
     }
 
+    fun serviceAccount(): ServiceAccount {
+        return retrofit.create(ServiceAccount::class.java)
+    }
+
 }
