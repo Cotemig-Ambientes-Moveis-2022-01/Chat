@@ -10,4 +10,7 @@ interface ServiceAccount {
     @POST("account/auth")
     fun auth(@Body account: Account): Call<Account>
 
+    @POST("account")
+    fun create(@Body account: Account): Call<Account>
+
 }
