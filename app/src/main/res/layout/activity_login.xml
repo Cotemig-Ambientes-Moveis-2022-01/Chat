@@ -45,4 +45,13 @@
         android:text="@string/entrar"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/cadastre_se"
+        android:textAllCaps="false" />
+
 </RelativeLayout>

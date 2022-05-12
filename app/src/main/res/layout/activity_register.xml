@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.RegisterActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="53dp"
+        android:background="@color/transparent"
+        android:src="@drawable/icon_chevron_left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52.7dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/crie_uma_conta"
+        android:textColor="@color/bluetext"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="122dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/crie_uma_nconta"
+        android:textColor="@color/textcolor"
+        android:textSize="36sp" />
+
+    <RelativeLayout
+        android:id="@+id/boxName"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/title"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/background_text">
+
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8.4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/nome"
+            android:textColor="@color/bluetext"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/labelName"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5.9dp"
+            android:layout_marginBottom="5.9dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/seu_nome"
+            android:textColor="@color/bluetext"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boxEmail"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/boxName"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_text">
+
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8.4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/e_mail"
+            android:textColor="@color/bluetext"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/labelEmail"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5.9dp"
+            android:layout_marginBottom="5.9dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/hint_email"
+            android:textColor="@color/bluetext"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

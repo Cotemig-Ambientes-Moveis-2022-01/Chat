@@ -6,4 +6,11 @@
     <string name="entre_com_seu_e_mail">Entre com seu e-mail</string>
     <string name="entre_com_sua_senha">Entre com sua senha</string>
     <string name="entrar">Entrar</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="crie_uma_conta">Crie uma conta</string>
+    <string name="crie_uma_nconta">Crie uma\nconta</string>
+    <string name="seu_nome">Seu nome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="nome">Nome</string>
+    <string name="hint_email">nome@email.com</string>
 </resources>

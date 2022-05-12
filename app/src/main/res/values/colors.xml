@@ -14,4 +14,5 @@
     <color name="edittextcolor">#848484</color>
     <color name="edittextback">#fafafa</color>
     <color name="transparent">#00000000</color>
+    <color name="bluetext">#0d3f67</color>
 </resources>

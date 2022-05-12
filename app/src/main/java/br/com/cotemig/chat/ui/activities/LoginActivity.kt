@@ -21,6 +21,13 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             login()
         }
+
+        var btnRegister = findViewById<Button>(R.id.btnRegister)
+        btnRegister.setOnClickListener {
+            var intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun login() {
@@ -39,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (response.code() == 200) {
 
-                    response.body()?.let{
+                    response.body()?.let {
                         showFriends(it)
                     }
 
@@ -65,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    fun showFriends(account: Account){
+    fun showFriends(account: Account) {
         var intent = Intent(this, FriendsActivity::class.java)
         intent.putExtra("token", account.token)
         startActivity(intent)
