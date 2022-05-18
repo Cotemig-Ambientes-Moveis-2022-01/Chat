@@ -13,4 +13,6 @@
     <string name="e_mail">E-mail</string>
     <string name="nome">Nome</string>
     <string name="hint_email">nome@email.com</string>
+    <string name="senha">Senha</string>
+    <string name="_6_a_12_caracteres">6 a 12 caracteres</string>
 </resources>

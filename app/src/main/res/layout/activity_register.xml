@@ -109,7 +109,57 @@
             android:textColor="@color/bluetext"
             android:textSize="15sp" />
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boxPassword"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/boxEmail"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_text">
+
+        <TextView
+            android:id="@+id/labelPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8.4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/senha"
+            android:textColor="@color/bluetext"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/labelPassword"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5.9dp"
+            android:layout_marginBottom="5.9dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/_6_a_12_caracteres"
+            android:inputType="textPassword"
+            android:textColor="@color/bluetext"
+            android:textSize="15sp" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/boxPassword"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/background_button"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Criar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
 </RelativeLayout>
